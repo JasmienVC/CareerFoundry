@@ -42,13 +42,13 @@ fetch(url)
                   .then((data) => {
                     info.innerHTML = ""
                     courses.innerHTML = ""
-                    info.insertAdjacentHTML("beforeend", `
-                    <p>Description: ${data.description}</p>
-                    <p>Next start date: ${data.start_dates[0]}</p>
-                    <p>All start dates: ${data.start_dates}</p>
-                    <p>Price: ${data.prices[0].amount}$</p>
-                    <button><a href="javascript:window.location.href=window.location.href">Back</a></button>
-                    `)
+                    info.insertAdjacentHTML("beforeend", `<div class="course-info">
+                    <p><b>Description</b>: ${data.description}</p>
+                    <p><b>Next start date</b>: ${data.start_dates[0]}</p>
+                    <p><b>All start dates</b>: ${data.start_dates}</p>
+                    <p><b>Price</b>: ${data.prices[0].amount}$</p>
+                    <a id="back" href="javascript:window.location.href=window.location.href">Back</a>
+                    </div>`)
                   })
               }
             })
