@@ -11,8 +11,9 @@ fetch(url)
     let i = 0
       data.forEach((result) => {
       array.push(result.slug)
-      const course = `<li id=course-item-${i}><a href="">${result.title}</a></li>`
+      const course = `<li id=course-item-${i}>${result.title}</li>`
       courses.insertAdjacentHTML("beforeend",  course)
+      courses.insertAdjacentHTML("beforeend", '<button>More Info</button>')
       i = i + 1
     })
   })
@@ -23,6 +24,7 @@ document.addEventListener("click", (event) => {
     .then(response => response.json())
     .then((data) => {
       info.innerHTML = ""
+      courses.innerHTML = ""
       info.insertAdjacentHTML("beforeend", `
       <p>Description: ${data.description}</p>
       <p>Next start date: ${data.start_dates[0]}</p>
