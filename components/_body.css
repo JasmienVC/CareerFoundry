@@ -1,0 +1,17 @@
+#body {
+  background-color: lightgrey;
+  color: #223C50;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 4%;
+}
+
+#body h1 {
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+#body h2 {
+  font-size: 28px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

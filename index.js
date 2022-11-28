@@ -1,7 +1,7 @@
 const courses = document.querySelector('#courses');
 const url = "https://private-e05942-courses22.apiary-mock.com/courses";
 const info = document.querySelector('#info');
-const urls = []
+const slugs = []
 const accessKey = "b604a70d37074e3a391d744f9d46e8656646cbbf58a81dabd89083e3"
 const ipdata = `https://api.ipdata.co/?api-key=${accessKey}`
 
@@ -12,8 +12,7 @@ fetch(url)
       const course = `<p class="course-item"}>${result.title}</p>`
       const courseButton = '<button class="course-btn">More Info</button>'
       courses.insertAdjacentHTML("beforeend", `<div class="my-card">${course}${courseButton}</div>`)
-      //courses.insertAdjacentHTML("beforeend", courseButton)
-      urls.push(result.slug)
+      slugs.push(result.slug)
     });
 
       document.querySelectorAll(".course-btn").forEach((b, index) => {
@@ -23,7 +22,7 @@ fetch(url)
             .then(response => response.json())
             .then((data) => {
               if(data.is_eu) {
-                fetch((url + '/' + urls[index]))
+                fetch((url + '/' + slugs[index]))
                   .then(response => response.json())
                   .then((data) => {
                     info.innerHTML = ""
@@ -38,7 +37,7 @@ fetch(url)
                   })
               } else
               {
-                fetch((url + '/' + urls[index]))
+                fetch((url + '/' + slugs[index]))
                   .then(response => response.json())
                   .then((data) => {
                     info.innerHTML = ""
