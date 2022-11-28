@@ -2,7 +2,7 @@
 #banner {
   background-color: #223C50;
   color: white;
-  height: 67vh;
+  height: 62vh;
   width: 100vw;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -15,18 +15,6 @@
 #banner p {
   font-size: 27px;
   font-weight: bold;
-}
-
-#banner button {
-  background-color: #223C50;
-  color: white;
-  border: 3px solid white;
-  padding: 12px;
-  font-weight: bolder;
-}
-
-#banner button:hover {
-  color: lightgrey;
 }
 
 #banner #text {
@@ -44,4 +32,79 @@
 }
 
 /* body styling */
+#body {
+  background-color: lightgrey;
+  color: #223C50;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 4%;
+}
 
+#body h1 {
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+#body h2 {
+  font-size: 28px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* card styling */
+#courses {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.my-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #223C50;
+  color: white;
+  height: 24vh;
+  width: 76vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+  margin: 2%;
+}
+
+.my-card p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.course-btn {
+  background-color: #223C50;
+  color: white;
+  border: 3px solid white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.course-btn:hover {
+  color: lightgray;
+}
+
+/* info styling */
+.course-info {
+  border: 3px solid #223C50;
+  padding: 4%;
+}
+
+#back{
+  color: #223C50;
+  font-size: larger;
+  text-decoration: none;
+}
+
+#back:hover{
+  text-decoration: underline;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
