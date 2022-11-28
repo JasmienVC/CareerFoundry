@@ -1,0 +1,19 @@
+.course-info {
+  border: 3px solid #223C50;
+  padding: 4%;
+}
+
+#back{
+  color: #223C50;
+  font-size: larger;
+  text-decoration: none;
+}
+
+#back:hover{
+  text-decoration: underline;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
